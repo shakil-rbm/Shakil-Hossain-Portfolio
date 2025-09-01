@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md Shakil Hossain - Portfolio</title>
+<link rel="icon" href="assets/favicon.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<style>
+:root{ --accent:#7c3aed; --muted:#94a3b8; --bg:#0b1020; --card:#0f1724; }
+body{background:radial-gradient( circle at 10% 10%, rgba(124,58,237,0.06), transparent 20% ), linear-gradient(180deg, #020617 0%, #071026 100%); color:#e6eef8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+.container{max-width:1100px; margin:0 auto; padding:2rem;}
+.nav-link{color:rgba(230,238,248,0.85);}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(124,58,237,0.12); box-shadow: 0 8px 30px rgba(2,6,23,0.6); border-radius:12px;}
+.glow{box-shadow: 0 0 30px rgba(124,58,237,0.12);}
+.small{font-size:0.9rem; color:var(--muted);}
+.btn-primary{background:var(--accent); color:white; padding:0.65rem 1rem; border-radius:8px;}
+.footer{color:var(--muted); text-align:center; padding:2rem 0; font-size:0.9rem;}
+</style>
+
+</head>
+<body>
+<div id="tsparticles" style="position:fixed; inset:0; z-index:-1;"></div>
+<nav class="container flex justify-between items-center py-6">
+  <div class="flex items-center gap-4">
+    <div class="text-2xl font-bold" style="color:var(--accent)">Md Shakil Hossain</div>
+  </div>
+  <div class="flex gap-6">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="experience.html">Experience</a>
+    <a class="nav-link" href="resume.html">Resume</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="container py-12">
+  <h2 class="text-3xl font-bold mb-6" style="color:var(--accent)">Experience & Projects</h2>
+  <div class="card p-6 mb-6">
+    <h3 class="text-xl font-semibold">Senior Executive – Group Internal Audit, DBL Group</h3>
+    <p class="small mt-2">Jan 2024 – Present</p>
+    <ul class="mt-3 list-disc pl-6 small">
+      <li>Conduct process & operational audits across manufacturing units including inventory, wastage, and payroll verifications.</li>
+      <li>Prepare internal audit reports and coordinate corrective action plans with management.</li>
+    </ul>
+  </div>
+
+  <div class="card p-6 mb-6">
+    <h3 class="text-xl font-semibold">Supervisor – Accounts, Noah’s Ark Logistics</h3>
+    <p class="small mt-2">Jan 2023 – Dec 2023</p>
+    <ul class="mt-3 list-disc pl-6 small">
+      <li>Managed full accounting cycle for freight operations, billing, and receivables; implemented improvements reducing DSO.</li>
+      <li>Prepared financial statements and reports for management and tax authorities.</li>
+    </ul>
+  </div>
+
+  <div class="card p-6 mb-6">
+    <h3 class="text-xl font-semibold">Assistant Manager – Audit & Assurance, A. Wahab & Co.</h3>
+    <p class="small mt-2">Oct 2018 – Feb 2023</p>
+    <ul class="mt-3 list-disc pl-6 small">
+      <li>Led 50+ statutory and special audits for manufacturing, INGOs, and service clients; managed donor reporting and NGOAB budgets.</li>
+      <li>Conducted forensic audits, asset verifications, and prepared audit documentation in compliance with IFRS/BAS.</li>
+    </ul>
+  </div>
+
+  <div class="card p-6">
+    <h3 class="text-xl font-semibold">Major Clients & Audit Engagements</h3>
+    <p class="small mt-2">Plan International, WaterAid, IOM, ActionAid, Nutrition International, City Bank, Janata Jute Mills, Genvio Pharma, and others (full list downloadable in resume).</p>
+  </div>
+</section>
+
+<footer class="footer">© 2025 Md Shakil Hossain</footer>
+
+<script>
+tsParticles.load("tsparticles", { "particles": { "number": { "value": 50 }, "color": { "value": ["#7c3aed","#3b82f6"] }, "opacity": { "value": 0.6 }, "size": { "value": 2.5 }, "move": { "enable": true, "speed": 0.6 }}});
+ScrollReveal().reveal('.card', { distance: '30px', duration: 700, interval: 120, origin: 'bottom' });
+</script>
+</body>
+</html>
