@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Shakil Hossain | Finance & Audit Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --accent: #7c3aed;
+            --muted: #94a3b8;
+            --bg: #020617;
+            --card: #0b1224;
+            --text: #e6eef8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: radial-gradient(1000px 600px at 10% 10%, rgba(124, 58, 237, 0.12), transparent), #020617;
+            color: var(--text);
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 1.25rem;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: rgba(230, 238, 248, 0.86);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .badge {
+            border: 1px solid rgba(124, 58, 237, 0.4);
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: #c7d2fe;
+            margin-left: 1rem;
+        }
+        
+        /* Card Styles */
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(124, 58, 237, 0.14);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+            padding: 1.5rem;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(2, 6, 23, 0.5);
+        }
+        
+        /* Buttons */
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(120deg, rgba(124, 58, 237, 0.2), rgba(56, 189, 248, 0.15));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            margin-bottom: 2rem;
+            background: rgba(124, 58, 237, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: #c7d2fe;
+            font-size: 0.9rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Clients Section */
+        .clients {
+            display: flex;
+            gap: 0.75rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .clients .track {
+            display: flex;
+            gap: 0.75rem;
+            animation: scroll 22s linear infinite;
+        }
+        
+        .client-pill {
+            white-space: nowrap;
+            padding: 0.45rem 0.75rem;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: #c7d2fe;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: fadeIn 1s;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--card);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content h4 {
+            color: var(--muted);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .timeline-content p {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--card);
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -13px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -13px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 5px;
+            font-family: inherit;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+        }
+        
+        /* Resume Request Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: var(--card);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .close-modal {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--muted);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--bg);
+            color: var(--muted);
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--muted);
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+            }
+            
+            .hero-gradient {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-gradient {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Md Shakil Hossain <span class="badge">ITP Certified</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Finance · Audit · Compliance · FP&A</span>
+                <h1 class="hero-gradient">Building resilient finance systems & insightful reporting</h1>
+                <p>CA Professional Level candidate and MBA student with 6.5+ years of progressive experience in Finance, Accounts, and Internal Audit.</p>
+                <div class="hero-buttons" style="margin-top: 2rem;">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#" class="btn btn-outline" id="requestResumeBtn" style="margin-left: 1rem;">Request Detailed Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card reveal">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Professional Summary</h3>
+                    <p>Finance, Audit & Compliance professional with 6.5+ years across NGOs, logistics, and manufacturing. Skilled in IFRS/BFRS, donor reporting, tax/VAT, and ERP implementations.</p>
+                </div>
+                <div class="card reveal">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Education & Certifications</h3>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem;">
+                        <li>MBA & BBA in Accounting</li>
+                        <li>CA (CC)</li>
+                        <li>ITP Certified</li>
+                        <li>Advanced Excel & Financial Modeling</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem;">Core Competencies</h3>
+                    <div class="skills" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="client-pill">Variance Analysis</span>
+                        <span class="client-pill">Tax & VAT</span>
+                        <span class="client-pill">Process Audit</span>
+                        <span class="client-pill">Financial Reporting</span>
+                        <span class="client-pill">Internal Audit</span>
+                        <span class="client-pill">Budgeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <h3>DBL Group</h3>
+                        <h4>Senior Executive – Group Internal Audit</h4>
+                        <p>Check and verify payroll accuracy, participate in process audits, evaluate internal controls, prepare audit reports, test controls effectiveness, and monitor corrective actions.</p>
+                        <p><small>Jan 2024 - Present</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <h3>Noah's Ark Logistics</h3>
+                        <h4>Supervisor, Accounts</h4>
+                        <p>Oversaw financial recording for freight transactions, supervised billing processes, managed accounts receivable, led accounting team, and facilitated strategic decision-making.</p>
+                        <p><small>Jan 2023 - Dec 2023</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-content">
+                        <h3>A. Wahab & Co. Chartered Accountants</h3>
+                        <h4>Assistant Manager (Audit & Assurance Service)</h4>
+                        <p>Supervised full-cycle accounting for NGOs, developed audit plans, led audit teams, built client relationships, assessed internal controls, and prepared audit reports.</p>
+                        <p><small>Oct 2018 - Feb 2023</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Major Clients</h2>
+            </div>
+            <div class="card">
+                <div class="clients">
+                    <div class="track">
+                        <div class="client-pill">Zenin Cold Storage Limited</div>
+                        <div class="client-pill">Janata Jute Mills Limited</div>
+                        <div class="client-pill">Sadat Jute Industries Limited</div>
+                        <div class="client-pill">NOVOAIR Limited</div>
+                        <div class="client-pill">Genvio Pharma Limited</div>
+                        <div class="client-pill">Crossline Woven Apparels Limited</div>
+                        <div class="client-pill">Panda Shoes Industry Limited</div>
+                        <div class="client-pill">United Purpose (UP)</div>
+                        <div class="client-pill">Pathfinder</div>
+                        <div class="client-pill">Article19 Bangladesh</div>
+                        <div class="client-pill">Plan International Bangladesh</div>
+                        <div class="client-pill">ActionAid Bangladesh</div>
+                        <div class="client-pill">WaterAid Bangladesh</div>
+                        <div class="client-pill">Care Bangladesh</div>
+                    </div>
+                    <div class="track">
+                        <div class="client-pill">Zenin Cold Storage Limited</div>
+                        <div class="client-pill">Janata Jute Mills Limited</div>
+                        <div class="client-pill">Sadat Jute Industries Limited</div>
+                        <div class="client-pill">NOVOAIR Limited</div>
+                        <div class="client-pill">Genvio Pharma Limited</div>
+                        <div class="client-pill">Crossline Woven Apparels Limited</div>
+                        <div class="client-pill">Panda Shoes Industry Limited</div>
+                        <div class="client-pill">United Purpose (UP)</div>
+                        <div class="client-pill">Pathfinder</div>
+                        <div class="client-pill">Article19 Bangladesh</div>
+                        <div class="client-pill">Plan International Bangladesh</div>
+                        <div class="client-pill">ActionAid Bangladesh</div>
+                        <div class="client-pill">WaterAid Bangladesh</div>
+                        <div class="client-pill">Care Bangladesh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Md Shakil Hossain</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2023 Md Shakil Hossain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Resume Request Modal -->
+    <div class="modal" id="resumeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="color: var(--accent);">Request Detailed Resume</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="resumeRequestForm">
+                <div class="form-group">
+                    <label for="requesterName">Your Name</label>
+                    <input type="text" id="requesterName" required>
+                </div>
+                <div class="form-group">
+                    <label for="requesterEmail">Your Email</label>
+                    <input type="email" id="requesterEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="requesterCompany">Company/Organization</label>
+                    <input type="text" id="requesterCompany" required>
+                </div>
+                <div class="form-group">
+                    <label for="purpose">Purpose of Request</label>
+                    <textarea id="purpose" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Reveal elements on scroll
+        function revealElements() {
+            const elements = document.querySelectorAll('.reveal');
+            elements.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealElements);
+        // Initial call to check elements in view on page load
+        window.addEventListener('load', revealElements);
+        
+        // Resume Request Modal
+        const requestResumeBtn = document.getElementById('requestResumeBtn');
+        const resumeModal = document.getElementById('resumeModal');
+        const closeModalBtn = document.querySelector('.close-modal');
+        
+        requestResumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            resumeModal.style.display = 'flex';
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            resumeModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                resumeModal.style.display = 'none';
+            }
+        });
+        
+        // Form submissions
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. I will get back to you soon!');
+            this.reset();
+        });
+        
+        document.getElementById('resumeRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest. I will send my detailed resume to your email shortly.');
+            this.reset();
+            resumeModal.style.display = 'none';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
