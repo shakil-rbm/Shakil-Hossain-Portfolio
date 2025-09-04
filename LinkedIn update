@@ -1,0 +1,9 @@
+<p class="small mt-2">
+  Email: shakil.h64@gmail.com<br>
+  Phone: +8801982416443<br>
+  <a href="https://www.linkedin.com/in/shakil-rbm/" target="_blank" style="color:#0A66C2; text-decoration:none;">
+    LinkedIn Profile
+  </a>
+</p>
+<img src="assets/linkedin_qr.png" alt="LinkedIn QR" width="120" 
+     style="margin-top:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04)">
