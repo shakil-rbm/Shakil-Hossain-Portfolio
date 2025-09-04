@@ -1,7 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!doctype html><html lang='en'><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Shakil Hossain - Portfolio</title>
 <link rel="icon" href="assets/favicon.png" />
@@ -10,19 +7,15 @@
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <style>
 :root{ --accent:#7c3aed; --muted:#94a3b8; --bg:#0b1020; --card:#0f1724; }
-body{background:radial-gradient( circle at 10% 10%, rgba(124,58,237,0.06), transparent 20% ), linear-gradient(180deg, #020617 0%, #071026 100%); color:#e6eef8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+body{background:#020617; color:#e6eef8; font-family: Inter, ui-sans-serif, system-ui;}
 .container{max-width:1100px; margin:0 auto; padding:2rem;}
 .nav-link{color:rgba(230,238,248,0.85);}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(124,58,237,0.12); box-shadow: 0 8px 30px rgba(2,6,23,0.6); border-radius:12px;}
-.glow{box-shadow: 0 0 30px rgba(124,58,237,0.12);}
+.card{background:rgba(255,255,255,0.02); border:1px solid rgba(124,58,237,0.12); border-radius:12px; padding:1rem;}
 .small{font-size:0.9rem; color:var(--muted);}
 .btn-primary{background:var(--accent); color:white; padding:0.65rem 1rem; border-radius:8px;}
 .footer{color:var(--muted); text-align:center; padding:2rem 0; font-size:0.9rem;}
 </style>
-
-</head>
-<body>
-<div id="tsparticles" style="position:fixed; inset:0; z-index:-1;"></div>
+</head><body>
 <nav class="container flex justify-between items-center py-6">
   <div class="flex items-center gap-4">
     <div class="text-2xl font-bold" style="color:var(--accent)">Md Shakil Hossain</div>
@@ -36,32 +29,17 @@ body{background:radial-gradient( circle at 10% 10%, rgba(124,58,237,0.06), trans
     <a class="nav-link" href="contact.html">Contact</a>
   </div>
 </nav>
-
-<section class="container py-20">
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Professional Summary</h3>
-      <p class="small mt-2">Finance, Audit and Compliance professional with 6.5+ years across NGOs, manufacturing, and financial institutions. Skilled in IFRS, tax/VAT, ERP systems, donor reporting, and forensic audits.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Education & Certifications</h3>
-      <p class="small mt-2">MBA in Accounting, BBA in Accounting, CA (CC) - 7 papers completed, ITP Certified, Diploma in Financial Accounting, Microsoft Career Essentials.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Contact</h3>
-      <p class="small mt-2">Email: shakil.h64@gmail.com<br>Phone: +8801982416443<br><a href="https://www.linkedin.com/in/md-shakil-hossain-7a5a3b193" style="color:var(--accent)">LinkedIn Profile</a></p>
-      <img src="assets/linkedin_qr.png" alt="QR" width="120" style="margin-top:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04)">
-    </div>
+<section class='container py-20'>
+  <div class='grid md:grid-cols-3 gap-6'>
+    <div class='card'><h3 style='color:var(--accent)'>Professional Summary</h3>
+    <p class='small mt-2'>Finance, Audit and Compliance professional with 6.5+ years across NGOs, manufacturing, and financial institutions.</p></div>
+    <div class='card'><h3 style='color:var(--accent)'>Education & Certifications</h3>
+    <p class='small mt-2'>MBA in Accounting, BBA in Accounting, CA (CC), ITP Certified.</p></div>
+    <div class='card'><h3 style='color:var(--accent)'>Contact</h3>
+    <p class='small mt-2'>Email: shakil.h64@gmail.com<br>Phone: +8801982416443<br>
+    <a href='https://www.linkedin.com/in/shakil-rbm/' target='_blank' style='color:#0A66C2;'>LinkedIn Profile</a></p>
+    <img src='assets/linkedin_qr.png' alt='LinkedIn QR' width='120' style='margin-top:10px; border-radius:8px;'></div>
   </div>
 </section>
-
-<footer class="footer">
-  <div>© 2025 Md Shakil Hossain</div>
-</footer>
-
-<script>
-tsParticles.load("tsparticles", { "particles": { "number": { "value": 60 }, "color": { "value": ["#7c3aed","#06b6d4"] }, "opacity": { "value": 0.6 }, "size": { "value": 3 }, "move": { "enable": true, "speed": 0.6 }}});
-ScrollReveal().reveal('.card', { distance: '30px', duration: 700, interval: 100, origin: 'bottom' });
-</script>
-</body>
-</html>
+<footer class='footer'>© 2025 Md Shakil Hossain</footer>
+</body></html>

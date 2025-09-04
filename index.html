@@ -1,7 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!doctype html><html lang='en'><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Md Shakil Hossain - Portfolio</title>
 <link rel="icon" href="assets/favicon.png" />
@@ -10,20 +7,15 @@
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <style>
 :root{ --accent:#7c3aed; --muted:#94a3b8; --bg:#0b1020; --card:#0f1724; }
-body{background:radial-gradient( circle at 10% 10%, rgba(124,58,237,0.06), transparent 20% ), linear-gradient(180deg, #020617 0%, #071026 100%); color:#e6eef8; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+body{background:#020617; color:#e6eef8; font-family: Inter, ui-sans-serif, system-ui;}
 .container{max-width:1100px; margin:0 auto; padding:2rem;}
 .nav-link{color:rgba(230,238,248,0.85);}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(124,58,237,0.12); box-shadow: 0 8px 30px rgba(2,6,23,0.6); border-radius:12px;}
-.glow{box-shadow: 0 0 30px rgba(124,58,237,0.12);}
+.card{background:rgba(255,255,255,0.02); border:1px solid rgba(124,58,237,0.12); border-radius:12px; padding:1rem;}
 .small{font-size:0.9rem; color:var(--muted);}
 .btn-primary{background:var(--accent); color:white; padding:0.65rem 1rem; border-radius:8px;}
 .footer{color:var(--muted); text-align:center; padding:2rem 0; font-size:0.9rem;}
 </style>
-
-</head>
-<body>
-<div id="tsparticles" style="position:fixed; inset:0; z-index:-1;"></div>
-
+</head><body>
 <nav class="container flex justify-between items-center py-6">
   <div class="flex items-center gap-4">
     <div class="text-2xl font-bold" style="color:var(--accent)">Md Shakil Hossain</div>
@@ -37,66 +29,10 @@ body{background:radial-gradient( circle at 10% 10%, rgba(124,58,237,0.06), trans
     <a class="nav-link" href="contact.html">Contact</a>
   </div>
 </nav>
-
-<header class="container text-center py-20">
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-4" style="color:var(--accent);">Finance, Audit & Compliance Professional</h1>
-  <p class="max-w-3xl mx-auto small mb-6">6.5+ years in audit, accounts, donor compliance, and financial reporting. Expertise in IFRS/BFRS, tax & VAT, ERP systems, and forensic audits across INGOs, manufacturing, and financial institutions.</p>
-  <div class="flex justify-center gap-4">
-    <a href="resume.html" class="btn-primary glow">View Resume</a>
-    <a href="contact.html" class="btn-primary" style="background:transparent; border:1px solid rgba(255,255,255,0.06)">Contact</a>
-  </div>
+<header class='container text-center py-20'>
+<h1 class='text-4xl md:text-6xl font-extrabold mb-4' style='color:var(--accent);'>Finance, Audit & Compliance Professional</h1>
+<p class='max-w-3xl mx-auto small mb-6'>6.5+ years in audit, accounts, donor compliance, and financial reporting.</p>
+<a href='resume.html' class='btn-primary'>View Resume</a>
 </header>
-
-<section class="container py-12">
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Major Client Audits</h3>
-      <p class="small mt-2">Executed external, statutory & forensic audits for 20+ clients including Plan International, WaterAid, IOM, City Bank, and multiple manufacturing firms.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Donor-Funded Projects</h3>
-      <p class="small mt-2">Managed donor reporting and NGOAB budgeting for Nutrition International and other INGO clients; coordinated external audits and ensured compliance.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="text-xl font-semibold" style="color:var(--accent)">Systems & Process</h3>
-      <p class="small mt-2">Led ERP improvements, implemented stronger internal controls, and introduced reporting dashboards to enhance transparency and decision-making.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container py-12">
-  <div class="card p-6">
-    <h3 class="text-2xl font-bold" style="color:var(--accent)">Highlighted Projects</h3>
-    <ul class="mt-4 small list-disc pl-6">
-      <li>Full-cycle financial oversight for Nutrition International (donor reporting, FD6/FD7, external audit coordination)</li>
-      <li>Forensic and special audits for development partners and corporate clients</li>
-      <li>ERP & reporting improvements at DBL Group and Noah's Ark Logistics</li>
-    </ul>
-  </div>
-</section>
-
-<footer class="footer">
-  <div>© 2025 Md Shakil Hossain • Finance • Audit • Compliance</div>
-</footer>
-
-<script>
-tsParticles.load("tsparticles", {
-  "particles": {
-    "number": { "value": 80 },
-    "color": { "value": ["#7c3aed","#3b82f6","#06b6d4"] },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.7 },
-    "size": { "value": 3 },
-    "move": { "enable": true, "speed": 0.9, "direction": "none" }
-  },
-  "interactivity": {
-    "events": { "onhover": { "enable": true, "mode": "repulse" } }
-  },
-  "background": { "color": "#020617" }
-});
-
-ScrollReveal().reveal('.card', { distance: '30px', duration: 700, interval: 100, origin: 'bottom' });
-ScrollReveal().reveal('header h1, header p, header .btn-primary', { distance:'20px', duration:800, origin:'bottom', interval:200 });
-</script>
-</body>
-</html>
+<footer class='footer'>© 2025 Md Shakil Hossain</footer>
+</body></html>
